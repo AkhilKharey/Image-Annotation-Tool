@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+.container {
+    max-width: 1200px; /* Limit container width for better readability */
+    margin: 50px auto; /* Center container horizontally */
+    background-color: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow for depth */
+    padding: 20px; /* Add padding inside container */
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#imageInput {
+    flex: 1; /* Take remaining space */
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ced4da; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+}
+
+#annotationDetails {
+    margin-right: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue button */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+.clear-button {
+    margin-right: 10px; /* Add margin-right for spacing */
+}
+.save-button {
+    margin-right: 0px; /* Add margin-right for spacing */
+}
+.add-button{
+    margin-right:10px;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+canvas {
+    border: 1px solid #000;
+    border-radius: 5px;
+}

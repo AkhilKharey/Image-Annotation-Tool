@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Annotation Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-section">
+            <input type="file" id="imageInput" accept=".png" onchange="handleImage()">
+            <div id="annotationDetails">
+                <label for="classInput">Label:</label>
+                <input type="text" id="classInput" placeholder="Image label">
+            </div>
+            <button class="button add-button" onclick="addAnnotation()">Add Annotation</button>
+            <!-- <button class="button clear-button" onclick="clearLastAnnotation()">Clear Annotation</button> -->
+            <button class="button save-button" onclick="saveAnnotations(document.getElementById('classInput').value)">Save Annotations</button>
+        </div>
+        <div class="canvas-container">
+            <canvas id="annotationCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="fabric.min.js"></script>
+    
+    <script src="app.js"></script>
+</body>
+</html> 
