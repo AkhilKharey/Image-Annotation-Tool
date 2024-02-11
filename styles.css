@@ -46,10 +46,31 @@ body {
     margin-right: 10px; /* Add margin-right for spacing */
 }
 .save-button {
-    margin-right: 0px; /* Add margin-right for spacing */
+    margin-right: 10px; /* Add margin-right for spacing */
 }
 .add-button{
     margin-right:10px;
+}
+
+#zoomInButton{
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue button */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+#zoomOutButton{
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue button */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+
 }
 
 .button:hover {

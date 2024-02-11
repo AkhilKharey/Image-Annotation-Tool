@@ -274,3 +274,62 @@ function clearLastAnnotation() {
     }
 }
 
+function handleImage() {
+    if (!canvas) {
+        canvas = new fabric.Canvas('annotationCanvas');
+    }
+
+    var input = document.getElementById('imageInput');
+    var file = input.files[0];
+
+    if (file) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            var img = new Image();
+            img.onload = function () {
+                var fabricImg = new fabric.Image(img, {
+                    left: 0,
+                    top: 0,
+                    scaleX: 1,
+                    scaleY: 1
+                });
+                canvas.clear();
+                canvas.add(fabricImg);
+                canvas.setWidth(img.width);
+                canvas.setHeight(img.height);
+                canvas.renderAll();
+            };
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
+// Add zoom in functionality
+function zoomIn() {
+    if (canvas) {
+        var zoomFactor = 1.1;
+        canvas.setZoom(canvas.getZoom() * zoomFactor);
+        canvas.renderAll();
+    }
+}
+
+// Add zoom out functionality
+function zoomOut() {
+    if (canvas) {
+        var zoomFactor = 1.1;
+        canvas.setZoom(canvas.getZoom() / zoomFactor);
+        canvas.renderAll();
+    }
+}
+
+// Event listener for zoom in button
+document.getElementById('zoomInButton').addEventListener('click', function () {
+    zoomIn();
+});
+
+// Event listener for zoom out button
+document.getElementById('zoomOutButton').addEventListener('click', function () {
+    zoomOut();
+});
+

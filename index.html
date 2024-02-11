@@ -17,6 +17,8 @@
             <button class="button add-button" onclick="addAnnotation()">Add Annotation</button>
             <!-- <button class="button clear-button" onclick="clearLastAnnotation()">Clear Annotation</button> -->
             <button class="button save-button" onclick="saveAnnotations(document.getElementById('classInput').value)">Save Annotations</button>
+            <button id="zoomInButton">Zoom In</button>
+            <button id="zoomOutButton">Zoom Out</button>
         </div>
         <div class="canvas-container">
             <canvas id="annotationCanvas"></canvas>
@@ -26,5 +28,11 @@
     <script src="fabric.min.js"></script>
     
     <script src="app.js"></script>
+
+    <script>
+        function chooseFile() {
+          document.getElementById('imageInput').click();
+        }
+      </script>
 </body>
 </html> 
